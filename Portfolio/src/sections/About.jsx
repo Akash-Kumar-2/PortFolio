@@ -88,7 +88,9 @@ const About = () => {
             <div >
   <p className="grid-headtext">I&apos;m a passionate web developer from Noida, India.</p>
   <p className="grid-subtext">I&apos;m currently pursuing my B.Tech in Computer Science at JSS Academy of Technical Education, Noida. I completed my schooling from Saint James School, Hardoi,U.P.,India.</p>
+  <a href="#contact">
   <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+</a>
 </div>
 
           </div>

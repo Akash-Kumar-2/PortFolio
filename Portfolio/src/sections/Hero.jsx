@@ -10,6 +10,7 @@ import ReactLogo from '../components/ReactLogo';
 import Cube from '../components/Cube';
 import Rings from '../components/Ring';
 import HeroCamera from '../components/HeroCamera';
+import Button from '../components/Button'
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -48,6 +49,11 @@ const Hero = () => {
             </Suspense>
         </Canvas>
     </div>
+    <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="resume\New_resume (3).pdf" className="w-fit" target='_blank' rel='noreferrer' download>
+          <Button name="Resume" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
+      </div>
     </section>
   )
 }

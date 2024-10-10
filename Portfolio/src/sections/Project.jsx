@@ -1,44 +1,36 @@
-import React, { useState } from 'react'
-import { myProjects } from '../constants'
+import React, { useEffect, useState } from 'react';
+import { myProjects } from '../constants';
 import Card from '../components/Card/Card';
 import Carousel from '../components/Crousel';
+import Slider from '../components/Slider';
 
 const projectCount = myProjects.length;
 
 const Project = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const handleNavigation = (direction) => {
-    setSelectedProjectIndex((prevIndex) => {
-      if (direction === 'previous') {
-        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
-      } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-      }
-    });
-  };
   const currentProject = myProjects[selectedProjectIndex];
 
-  currentProject.images.map((img) => {
-    return {
-      key: img?.id,
-      content: (
-        <Card imagen={img?.path} />
-      ),
-    }
-  }
-  )
+  const handleNavigation = (direction) => {
+    setSelectedProjectIndex((prevIndex) => {
+      const newIndex =
+        direction === 'previous'
+          ? prevIndex === 0
+            ? projectCount - 1
+            : prevIndex - 1
+          : prevIndex === projectCount - 1
+          ? 0
+          : prevIndex + 1;
+      return newIndex;
+    });
+  };
 
-  console.log(currentProject?.images)
-
-  let cards = currentProject?.images;
-
-
+  useEffect(() => {
+    console.log('Current Project:', currentProject);
+  }, [currentProject]);
 
   return (
-    <section id='project' className='my-20 c-space' >
-      <p className='head-text'>
-        My Projects
-      </p>
+    <section id='project' className='my-20 c-space'>
+      <p className='head-text'>My Projects</p>
       <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
         <div className='flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200'>
           <div className='absolute top-0 right-0'>
@@ -58,9 +50,7 @@ const Project = () => {
                 <div key={index} className='tech-logo'>
                   <img src={tag.path} alt={tag.name} />
                 </div>
-              )
-              )
-              }
+              ))}
             </div>
             {currentProject.hosted && (
               <a href={currentProject.href} className='flex items-center gap-2 cursor-pointer text-white-600' target='_blank' rel='noreferrer'>
@@ -73,26 +63,15 @@ const Project = () => {
             <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
               <img src="/assets/left-arrow.png" alt="left arrow" />
             </button>
-
             <button className="arrow-btn" onClick={() => handleNavigation('next')}>
               <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
             </button>
           </div>
         </div>
-        <div className='flex flex-xol gap-5 relative grid-container'>
-          <Carousel
-            cards={cards}
-            height="500px"
-            width="65%"
-            margin="0 auto"
-            offset={2}
-            showArrows={false}
-          />
-        </div>
+        <Slider project={currentProject} />
       </div>
-
     </section>
-  )
+  );
 }
 
-export default Project
+export default Project;

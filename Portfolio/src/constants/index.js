@@ -109,32 +109,32 @@ export const myProjects = [
       {
         id: 1,
         name: 'Home',
-        path: '/textures/project/natours/1.png',
+        path: '/textures/project/buynrent/1b.png',
       },
       {
         id: 2,
         name: 'Login',
-        path: '/textures/project/natours/2.png',
+        path: '/textures/project/buynrent/2b.png',
       },
       {
         id: 3,
         name: 'After_Login',
-        path: '/textures/project/natours/3.png',
+        path: '/textures/project/buynrent/3b.png',
       },
       {
         id: 4,
         name: 'TourCard',
-        path: '/textures/project/natours/4.png',
+        path: '/textures/project/buynrent/4b.png',
       },
       {
         id: 5,
         name: 'TourImg',
-        path: '/textures/project/natours/5.png',
+        path: '/textures/project/buynrent/5b.png',
       },
       {
         id: 6,
         name: 'HomeFooter',
-        path: '/textures/project/natours/6.png',
+        path: '/textures/project/buynrent/6b.png',
       },
     ],
     tags: [
@@ -178,32 +178,32 @@ export const myProjects = [
       {
         id: 1,
         name: 'Home',
-        path: '/textures/project/natours/1.png',
+        path: '/textures/project/atg/1a.png',
       },
       {
         id: 2,
         name: 'Login',
-        path: '/textures/project/natours/2.png',
+        path: '/textures/project/atg/2a.png',
       },
       {
         id: 3,
         name: 'After_Login',
-        path: '/textures/project/natours/3.png',
+        path: '/textures/project/atg/3a.png',
       },
       {
         id: 4,
         name: 'TourCard',
-        path: '/textures/project/natours/4.png',
+        path: '/textures/project/atg/4a.png',
       },
       {
         id: 5,
         name: 'TourImg',
-        path: '/textures/project/natours/5.png',
+        path: '/textures/project/atg/5a.png',
       },
       {
         id: 6,
         name: 'HomeFooter',
-        path: '/textures/project/natours/6.png',
+        path: '/textures/project/atg/6a.png',
       },
     ],
     tags: [
@@ -246,3 +246,36 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
   };
 };
+
+export const Profiles = [
+  {
+    id: 1,
+    name: 'LeetCode',
+    path: '/assets/leetcode.png',
+    href: 'https://leetcode.com/u/akashku/',
+  },
+  {
+    id: 2,
+    name: 'GeekForGeeks',
+    path: '/assets/gfg.png',
+    href: 'https://www.geeksforgeeks.org/user/akashkzd3l/'
+  },
+  {
+    id: 3,
+    name: 'CodingNinjas',
+    path: '/assets/cn.png',
+    href: 'https://www.naukri.com/code360/profile/sky1303'
+  },
+  {
+    id: 4,
+    name: 'github',
+    path: '/assets/github.png',
+    href: 'https://github.com/Akash-Kumar-2'
+  },
+  {
+    id: 5,
+    name: 'Linkedin',
+    path: '/assets/link.png',
+    href: 'https://www.linkedin.com/in/akashkumar2025'
+  },
+]

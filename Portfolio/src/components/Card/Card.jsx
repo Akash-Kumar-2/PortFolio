@@ -19,7 +19,7 @@ function Card({ imagen }) {
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     >
-      <img src={imagen} alt="" />
+      <img src={imagen} alt="Project Preview" className={Styles.cardImage} />
     </animated.div>
   );
 }

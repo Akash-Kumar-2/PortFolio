@@ -73,7 +73,7 @@ const Contact = () => {
         <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
 
         <div className="contact-container">
-        <h3 className="head-text">Let's Collaborate</h3>
+        <h3 className="head-text mt-5">Let's Collaborate</h3>
 <p className="text-lg text-white-600 mt-3">
   Whether you're looking to work on exciting projects, enhance your skills, or contribute to our college community, I'm here to connect and collaborate. Let's build something great together!
 </p>
