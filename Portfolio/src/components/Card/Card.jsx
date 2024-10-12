@@ -4,7 +4,6 @@ import { useSpring, animated } from "react-spring";
 
 function Card({ imagen }) {
   const [show, setShown] = useState(false);
-  console.log(imagen)
 
   const props3 = useSpring({
     transform: show ? "scale(1.03)" : "scale(1)",

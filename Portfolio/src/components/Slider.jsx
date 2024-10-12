@@ -7,16 +7,15 @@ const Slider = (props) => {
     content: <Card imagen={img?.path} />,
   }));
   return (
-    <div className='flex flex-col gap-5 relative grid-container object-contain'>
+    
           <Carousel
             cards={cards}
             height="500px"
             width="65%"
             margin="0 auto"
             offset={2}
-            showArrows={false}
+            showArrows={true}
           />
-        </div>
   )
 }
 

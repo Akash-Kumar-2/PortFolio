@@ -68,7 +68,10 @@ const Project = () => {
             </button>
           </div>
         </div>
+        <div className='flex flex-col gap-5 relative grid-container object-contain'>
+
         <Slider project={currentProject} />
+        </div>
       </div>
     </section>
   );

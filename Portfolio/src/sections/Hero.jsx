@@ -11,6 +11,7 @@ import Cube from '../components/Cube';
 import Rings from '../components/Ring';
 import HeroCamera from '../components/HeroCamera';
 import Button from '../components/Button'
+import HeroP from '../components/HeroP';
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -25,7 +26,7 @@ const Hero = () => {
       <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
         Hi, I am Akash <span className="waving-hand">👋</span>
       </p>
-      <p className="hero_tag text-gray_gradient">A Fullstack Developer</p>
+      <HeroP/>
     </div>
     <div className='w-full h-full absolute inset-0'>
         <Canvas className='w-full h-full'>
